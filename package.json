@@ -1,6 +1,6 @@
 {
   "name": "local-cost-meter",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "main": "lib/index.js",
   "description": "dsh-go 原生费用显示插件：费用胶囊、每条回复的本轮费用、费用面板（本会话/今日/近 7 天、Token 与缓存命中、模型排行、峰谷倒计时、预算），按 DeepSeek 官方人民币价计价",
