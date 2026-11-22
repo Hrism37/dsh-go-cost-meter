@@ -1,0 +1,76 @@
+{
+  "name": "local-cost-meter",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "description": "dsh-go 原生费用显示插件：费用胶囊、每条回复的本轮费用、费用面板（本会话/今日/近 7 天、Token 与缓存命中、模型排行、峰谷倒计时、预算），按 DeepSeek 官方人民币价计价",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "费用",
+      "en": "Costs"
+    },
+    "icon": "money",
+    "contributes": {
+      "composer.actions": [
+        {
+          "id": "cost-panel",
+          "label": {
+            "zh": "费用",
+            "en": "Costs"
+          },
+          "icon": "money",
+          "effect": {
+            "type": "open",
+            "page": "panel:billing"
+          }
+        }
+      ],
+      "turn.note": [
+        {
+          "id": "turn-cost"
+        }
+      ],
+      "panels": [
+        {
+          "id": "billing",
+          "title": {
+            "zh": "费用",
+            "en": "Costs"
+          },
+          "icon": "money",
+          "placement": [
+            "session.tab",
+            "chat.panel",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hrism37/dsh-go-cost-meter.git"
+  },
+  "homepage": "https://github.com/Hrism37/dsh-go-cost-meter",
+  "bugs": {
+    "url": "https://github.com/Hrism37/dsh-go-cost-meter/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-go",
+    "deepseek-harness",
+    "cost",
+    "billing",
+    "plugin"
+  ]
+}
